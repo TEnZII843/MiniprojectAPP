@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawerLayout"
+    tools:context=".update">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:layout_editor_absoluteX="-46dp">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/toolbarcolor"
+                app:subtitleTextColor="#0A0A0A"
+                app:titleTextColor="#111111" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="UPDATE TASK"
+                android:textColor="#0A0A0A"
+                android:textAlignment="center"
+                style="@style/TextAppearance.AppCompat.Headline"
+                />
+
+            <EditText
+                android:id="@+id/TaskName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_input"
+                android:padding="20dp"
+                android:hint="Name of the Task" />
+
+            <EditText
+                android:id="@+id/TimeRequired"
+                android:background="@drawable/custom_input"
+                android:padding="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/TaskName"
+                android:layout_marginTop="20dp"
+                android:hint="Time required(In hours)" />
+
+            <EditText
+                android:id="@+id/Venue"
+                android:background="@drawable/custom_input"
+                android:padding="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/TimeRequired"
+                android:layout_marginTop="20dp"
+                android:hint="Venue" />
+
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Venue"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:background="@drawable/custom_input"
+                    android:padding="20dp"
+                    android:id="@+id/Date"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Venue"
+                    android:layout_marginTop="20dp"
+                    android:hint="Date"
+                    android:onClick="date" />
+
+                <ImageButton
+                    android:id="@+id/date_picker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:onClick="date"
+                    android:src="@drawable/ic_baseline_date_range_24" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/time"
+                    android:background="@drawable/custom_input"
+                    android:padding="20dp"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll"
+                    android:layout_marginTop="20dp"
+                    android:hint="Time"
+                    android:onClick="time" />
+
+                <ImageButton
+                    android:id="@+id/time_picker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:onClick="time"
+                    android:src="@drawable/ic_baseline_access_time_24" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll2"
+                android:layout_marginStart="155dp"
+                android:layout_marginTop="20dp"
+                android:onClick="updatedata"
+                android:background="@drawable/toolbarcolor"
+                android:text="UPDATE" />
+        </LinearLayout>
+    </ScrollView>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/activity_main_drawer">
+    </com.google.android.material.navigation.NavigationView>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

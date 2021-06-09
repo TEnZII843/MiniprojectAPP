@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Time Management</string>
+
+    <string name="menu_today">Dayview</string>
+    <string name="menu_week">Weekview</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_tools">Tools</string>
+    <string name="share">Share</string>
+    <string name="send">Send</string>
+    <string name="about">About</string>
+    <string name="exit">Exit</string>
+    <string name="contact">Contact</string>
+    <string name="details">This app is a very simple app that is designed to keep notes of the task we want to do on time and complete it on time.It will help us to remember the task we might forget to do. </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
